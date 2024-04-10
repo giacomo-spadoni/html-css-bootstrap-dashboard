@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+header {
+    width: 100%;
+    height: 4rem;
+}
+
+.search {
+    position: relative;
+}
+
+.search:before {
+    content: "";
+    position: absolute;
+    left: 1%;
+    top: 20%;
+    bottom: 0;
+    width: 20px;
+    background: url(../magnifying-glass-solid.svg);
+    background-repeat: no-repeat;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+.side-bar {
+    height: calc(100vh - 4rem);
+    width: 10rem;
+    background-color: #051e34;
+    background-image: url(../img/sidebar-bg.png);
+}
+
+.principal {
+    overflow: auto;
+    height: calc(100vh - 10.5rem);
+}
+
+.main-content {
+    height: calc(100vh - 4rem);
+    width: calc(100% - 10rem);
+}
+
+.side-bar i {
+    width: 30px;
+}
+
+.hover-white:hover {
+    background-color: rgba(255, 255, 255, 0.379);
+}
+
+.main-header {
+    width: 100%;
+    height: 6.5rem;
+}
+
+.main-header .badge {
+    --bs-bg-opacity: .3;
+}
+
+tr th:first-child {
+    width: 45%;
+}
+
+td:nth-last-of-type(even),
+th:nth-last-of-type(even) {
+    text-align: center;
+}
+
+.faq label,
+.faq input {
+    cursor: pointer;
+}
