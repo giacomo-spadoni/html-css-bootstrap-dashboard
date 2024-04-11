@@ -79,3 +79,17 @@ th:nth-last-of-type(even) {
 .faq input {
     cursor: pointer;
 }
+
+.dropdown-menu a {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    top: 100% !important;
+    left: -150px !important;
+}
+
+#offcanvasRight {
+    width: 50%;
+}
