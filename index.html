@@ -23,15 +23,16 @@
     <header class="row align-items-center  bg-body-tertiary">
         <!-- navbar -->
         <nav class="navbar">
-            <div class="container-fluid bg-white d-flex gap-3">
-                <a class="navbar-brand ps-3"><img class="img-fluid" src="./img/logo.svg" alt=""></a>
+            <div class="container-fluid bg-white d-flex gap-3 justify-content-between head_nav">
+                <a class="navbar-brand ps-3"><img class="img-fluid img_show" src="./img/logo.svg" alt=""><img
+                        class="img-fluid img_hidden" src="./img/mobile-logo.png" alt=""></a>
                 <form class="col search" role="search">
                     <input class="form-control me-2 ps-5" type="search"
                         placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
                 </form>
-                <a href=""><i class="fa-solid fa-list text-secondary"></i></i></a>
-                <a href=""><i class="fa-solid fa-circle-question text-secondary"></i></a>
-                <a href=""><i class="fa-solid fa-ellipsis-vertical text-secondary"></i></a>
+                <a href=""><i class="a_show fa-solid fa-list text-secondary"></i></i></a>
+                <a href=""><i class="a_show fa-solid fa-circle-question text-secondary"></i></a>
+                <a href=""><i class="a_show fa-solid fa-ellipsis-vertical text-secondary"></i></a>
                 <div class="btn-group dropstart">
                     <a data-bs-toggle="dropdown" aria-expanded="false" href=""><i
                             class="fa-solid fa-bell text-warning"></i></a>
@@ -51,35 +52,36 @@
         <section class="side-bar d-flex flex-column p-3 justify-content-between">
             <div class="px-2">
                 <div class="text-white hover-white p-2"><a class="text-white link-underline link-underline-opacity-0"
-                        href=""><i class="fa-solid fa-house"></i>Home</a></div>
+                        href=""><i class="fa-solid fa-house"></i><span class="span_show">Home</a></span></div>
                 <div class="text-white hover-white p-2"><a class="text-white link-underline link-underline-opacity-0"
-                        href=""><i class="fa-solid fa-chart-simple"></i>Stats</a></div>
+                        href=""><i class="fa-solid fa-chart-simple"></i><span class="span_show">Stats</span></a></div>
                 <div class="text-white hover-white p-2"><a class="text-white link-underline link-underline-opacity-0"
-                        href=""><i class="fa-solid fa-signal"></i>Signals</a></div>
+                        href=""><i class="fa-solid fa-signal"></i><span class="span_show">Signals</span></a></div>
             </div>
             <div class="px-3">
                 <div class="text-white hover-white p-2"><a class="text-white link-underline link-underline-opacity-0"
-                        href=""><i class="fa-solid fa-gear"></i>Admin</a></div>
+                        href=""><i class="fa-solid fa-gear"></i><span class="span_show">Admin</span></a></div>
             </div>
         </section>
         <section class="main-content bg-body-tertiary">
-            <div class="main-header text-white bg-primary d-flex px-2 py-3 align-items-start">
-                <div class="col-6">
+            <div class="main-header text-white bg-primary d-flex px-2 py-3 align-items-start justify-content-between">
+                <div class="col-12 col-sm-4" id="order_2">
                     <div><span class="fs-2">Boolean</span> <span class="badge rounded-pill text-bg-dark">Piano
                             blaze</span></div>
                     <div class="d-flex align-items-center gap-1">
                         <span class="badge rounded-pill text-bg-dark">3 app</span>
                         <i class="fa-solid fa-angles-right"></i>
-                        <span class="badge rounded-pill text-bg-dark">Boolean mobile app</span>
-                        <span class="badge rounded-pill text-bg-dark">Boolean web app</span>
-                        <span class="badge rounded-pill text-bg-dark">Boolean blog app</span>
+                        <span class="span_hidden badge rounded-pill text-bg-dark">+</span>
+                        <span class="span_show badge rounded-pill text-bg-dark">Boolean mobile app</span>
+                        <span class="span_show badge rounded-pill text-bg-dark">Boolean web app</span>
+                        <span class="span_show badge rounded-pill text-bg-dark">Boolean blog app</span>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-4 text-center" id="order_3">
                     <div class="fs-8">Studenti online negli ultimi 30 minuti</div>
                     <div class="fs-1">125</div>
                 </div>
-                <div class="col-3 pe-5 d-flex justify-content-end align-items-center gap-2">
+                <div class="col-12 col-sm-4 d-flex justify-content-end align-items-center gap-2" id="order_1">
                     Nuovo Studente
                     <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
@@ -94,15 +96,15 @@
                         </div>
                         <div class="offcanvas-body">
                             <form class="row">
-                                <div class="col-6 mb-3 ">
+                                <div class="col-12 col-lg-6 mb-3 ">
                                     <label for="name" class="form-label">Nome</label>
                                     <input type="text" class="form-control" id="name" aria-describedby="name">
                                 </div>
-                                <div class="col-6 mb-3 ">
+                                <div class="col-12 col-lg-6 mb-3 ">
                                     <label for="surname" class="form-label">Cognome</label>
                                     <input type="text" class="form-control" id="surname" aria-describedby="surname">
                                 </div>
-                                <div class="col-6">
+                                <div class="col-12 col-lg-6">
                                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                                     <div class="input-group mb-3 ">
                                         <span class="input-group-text" id="basic-addon1">@</span>
@@ -110,7 +112,7 @@
                                             aria-describedby="basic-addon1">
                                     </div>
                                 </div>
-                                <div class="col-6 mb-3 ">
+                                <div class="col-12 col-lg-6 mb-3 ">
                                     <label for="exampleInputPassword1" class="form-label">Password</label>
                                     <input type="password" class="form-control" id="exampleInputPassword1">
                                 </div>
@@ -118,11 +120,11 @@
                                     <label for="address" class="form-label">Indirizzo</label>
                                     <input type="text" class="form-control" id="address" aria-describedby="name">
                                 </div>
-                                <div class="col-6 mb-3 ">
+                                <div class="col-12 col-lg-6 mb-3 ">
                                     <label for="city" class="form-label">Città</label>
                                     <input type="text" class="form-control" id="city" aria-describedby="name">
                                 </div>
-                                <div class="col-3 mb-3">
+                                <div class="col-6 col-lg-3 mb-3">
                                     <label for="inputGroupSelect01" class="form-label">Stato</label>
                                     <select class="form-select" id="inputGroupSelect01">
                                         <option selected>Scegli...</option>
@@ -131,7 +133,7 @@
                                         <option value="3">Three</option>
                                     </select>
                                 </div>
-                                <div class="col-3 mb-3 ">
+                                <div class="col-6 col-lg-3 mb-3 ">
                                     <label for="cap" class="form-label">Cap</label>
                                     <input type="text" class="form-control" id="cap" aria-describedby="name">
                                 </div>
@@ -143,8 +145,8 @@
                                     <input type="checkbox" id="exampleCheck1">
                                     <label class="form-check-label" for="exampleCheck1">Seleziona per proseguire</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary col-2 mx-3">Salva</button>
-                                <button type="submit" class="btn btn-warning col-2">Svuota</button>
+                                <button type="submit" class="btn btn-primary mx-3">Salva</button>
+                                <button type="submit" class="btn btn-warning">Svuota</button>
                             </form>
 
                         </div>
@@ -152,12 +154,12 @@
                 </div>
             </div>
             <div class="d-flex principal">
-                <div class="col-8 py-3 px-2 d-flex flex-column gap-2">
+                <div class="col-12 col-md-8 py-3 px-2 d-flex flex-column gap-2">
                     <div class="card">
                         <div class="card-header fs-5"><b>Prossime classi</b></div>
                         <table class="table">
                             <thead>
-                                <tr>
+                                <tr id="diocane">
                                     <th scope="col"><b>Nome</b></th>
                                     <th scope="col"><b>Data inizio</b></th>
                                     <th scope="col"><b>ROI</b></th>
@@ -308,7 +310,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 py-3 px-2 d-flex flex-column gap-2">
+                <div class="col-12 col-md-4 py-3 px-2 d-flex flex-column gap-2">
                     <div class="card faq">
                         <div class="card-header fs-5"><b>F.A.Q.</b></div>
                         <div class="card m-3">

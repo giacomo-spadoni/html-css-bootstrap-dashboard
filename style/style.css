@@ -7,6 +7,9 @@
     font-style: normal;
 }
 
+.offcanvas button {
+    width: 5rem;
+}
 
 header {
     width: 100%;
@@ -40,11 +43,12 @@ input:focus::placeholder {
 }
 
 .principal {
-    overflow: auto;
     height: calc(100vh - 10.5rem);
+    flex-wrap: wrap;
 }
 
 .main-content {
+    overflow: auto;
     height: calc(100vh - 4rem);
     width: calc(100% - 10rem);
 }
@@ -59,7 +63,8 @@ input:focus::placeholder {
 
 .main-header {
     width: 100%;
-    height: 6.5rem;
+    min-height: 6.5rem;
+    flex-wrap: wrap;
 }
 
 .main-header .badge {
@@ -92,4 +97,95 @@ th:nth-last-of-type(even) {
 
 #offcanvasRight {
     width: 50%;
+}
+
+.img_hidden {
+    display: none;
+    width: 2.5rem;
+}
+
+.span_hidden {
+    display: none;
+}
+
+#order_1 {
+    padding-right: 2vw;
+}
+
+tr:hover th,
+tr:hover td {
+    background-color: lightgray;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-header .span_show {
+        display: none;
+    }
+
+    .span_hidden {
+        display: unset;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img_hidden {
+        display: unset;
+    }
+
+    .img_show {
+        display: none;
+    }
+
+    .a_show {
+        display: none;
+    }
+
+    .head_nav {
+        gap: .2rem !important;
+    }
+
+    .side-bar {
+        width: 3.5rem;
+    }
+
+    .side-bar div {
+        padding: .3rem 0 !important;
+    }
+
+    .span_show {
+        display: none;
+    }
+
+    .main-content {
+        width: calc(100% - 3.5rem);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #order_1 {
+        order: 1;
+        justify-content: start !important;
+    }
+
+    #order_2 {
+        margin-top: 1rem;
+        order: 2;
+    }
+
+    #order_3 {
+        margin-top: 1rem;
+        order: 3;
+        text-align: start !important;
+    }
+
+    th:nth-last-child(2),
+    th:nth-last-child(3),
+    td:nth-last-child(2),
+    td:nth-last-child(3) {
+        display: none;
+    }
+
+    #offcanvasRight {
+        width: 100%;
+    }
 }
